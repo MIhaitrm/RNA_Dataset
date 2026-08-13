@@ -24,34 +24,34 @@ pdb_files = ['1asy', '1a9n', '1b7f', '3wbm', '1av6', '1c9s', '1cvj', '1g2e', '1j
 '5hr7', '5t8y']
 # pdb_files = ['2az0', '1asy']
 print("pdb ids: ", len(pdb_files))
-# pockets = []
-# for i in pdb_files:
-# 	p = parsePDB(i)
-# 	pocket = p.select('same residue as within 7 of protein and nucleic')
-# 	pockets.append(pocket)
+pockets = []
+for i in pdb_files:
+	p = parsePDB(i)
+	pocket = p.select('same residue as within 7 of protein and nucleic')
+	pockets.append(pocket)
 
-# directory_name = "pockets"
-# try:
-#     os.mkdir(directory_name)
-#     print(f"Directory '{directory_name}' created successfully.")
-# except FileExistsError:
-#     print(f"Directory '{directory_name}' already exists.")
-# except PermissionError:
-#     print(f"Permission denied: Unable to create '{directory_name}'.")
-# except Exception as e:
-#     print(f"An error occurred: {e}")
+directory_name = "pockets"
+try:
+    os.mkdir(directory_name)
+    print(f"Directory '{directory_name}' created successfully.")
+except FileExistsError:
+    print(f"Directory '{directory_name}' already exists.")
+except PermissionError:
+    print(f"Permission denied: Unable to create '{directory_name}'.")
+except Exception as e:
+    print(f"An error occurred: {e}")
 
-# destination = './pockets'
-# files = []
-# for f, i in zip(pockets, pdb_files):
-# 	file = writePDB(i + "_pocket.pdb", f)
-# 	files.append(file)
+destination = './pockets'
+files = []
+for f, i in zip(pockets, pdb_files):
+	file = writePDB(i + "_pocket.pdb", f)
+	files.append(file)
 
-# for c in files:
-# 	shutil.copy(c, destination)
+for c in files:
+	shutil.copy(c, destination)
 
-# for filename in glob.glob("*.gz"):
-#     os.remove(filename)
+for filename in glob.glob("*.gz"):
+    os.remove(filename)
 
-# for f in glob.glob("*.pdb"):
-# 	os.remove(f)
+for f in glob.glob("*.pdb"):
+	os.remove(f)
