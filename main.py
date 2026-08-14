@@ -17,7 +17,7 @@ import os
 # os.system("./computeMSMS.py")
 # os.system("./save_ply.py")
 os.system("./read_data_from_surface.py")
-# os.system("./get_edges.py")
+os.system("./get_edges.py")
 
 ### run under pytorch_env
 # os.system("./save_npy.py")
