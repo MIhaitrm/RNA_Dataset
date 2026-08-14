@@ -20,5 +20,4 @@ os.system("./read_data_from_surface.py")
 # os.system("./get_edges.py")
 
 ### run under pytorch_env
-# os.system("./get_vertices.py")
-# os.system("./pt_save.py")
+# os.system("./save_npy.py")
