@@ -172,11 +172,11 @@ except Exception as e:
 
 destination = "feature_files"
 
-# for f in glob.glob("*.npy"):
-#     shutil.copy(f, destination)
+for f in glob.glob("*.npy"):
+    shutil.copy(f, destination)
 
-# for fi in glob.glob("*.npy"):
-#     os.remove(fi)
+for fi in glob.glob("*.npy"):
+    os.remove(fi)
 
 # print("Input_feat:", input_feat)
 
